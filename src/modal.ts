@@ -1,14 +1,12 @@
 import {action, computed, observable} from 'mobx';
+import fetchFromRemote from './fetchFromRemote';
 
 export class Counter {
   @observable count: number = 0
 
-  @action increase() {
-    this.count += 1;
-  }
-
-  @computed get double() {
-    return this.count * 2;
+  @action
+  async asyncIncrease() {
+    this.count += await fetchFromRemote()
   }
 
 }

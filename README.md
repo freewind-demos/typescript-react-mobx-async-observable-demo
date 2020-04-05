@@ -1,4 +1,4 @@
-TypeScript React MobX Demo
+TypeScript React MobX Async Action Demo
 ==========================
 
 ```
