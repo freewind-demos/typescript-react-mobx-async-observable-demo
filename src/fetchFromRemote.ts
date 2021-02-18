@@ -6,5 +6,10 @@ async function wait(seconds: number): Promise<void> {
 
 export default async function fetchFromRemote(): Promise<number> {
   await wait(1);
-  return Math.floor(Math.random() * 10);
+  const result = Math.floor(Math.random() * 100)
+  if (result % 2 === 0) {
+    return result;
+  } else {
+    throw new Error(`error: ${result}`)
+  }
 };
